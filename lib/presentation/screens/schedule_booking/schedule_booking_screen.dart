@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:schedulebooking/presentation/screens/schedule_booking/schedule_booking_bloc.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-class ShiftScheduler extends StatefulWidget {
-  const ShiftScheduler({Key? key}) : super(key: key);
+class ScheduleBookingScreen extends StatefulWidget {
+  const ScheduleBookingScreen({Key? key}) : super(key: key);
 
   @override
-  State createState() => _ShiftSchedulerState();
+  State createState() => _ScheduleBookingScreenState();
 }
 
-class _ShiftSchedulerState extends State {
+class _ScheduleBookingScreenState extends State {
   final CalendarController _calendarController = CalendarController();
   final ScheduleBookingBloc _scheduleBookingBloc = ScheduleBookingBloc();
 
