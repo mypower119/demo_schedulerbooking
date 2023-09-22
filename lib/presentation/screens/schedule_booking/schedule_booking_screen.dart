@@ -67,7 +67,7 @@ class _ScheduleBookingScreenState extends State {
       allowAppointmentResize: true,
       allowDragAndDrop: true,
       timeSlotViewSettings: const TimeSlotViewSettings(
-        minimumAppointmentDuration: Duration(minutes: 90),
+        minimumAppointmentDuration: Duration(minutes: 120),
         timeInterval: Duration(hours: 1),
         // timeIntervalHeight: 100,
       ),

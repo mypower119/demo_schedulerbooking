@@ -83,7 +83,7 @@ class ScheduleBookingBloc extends BaseBloc {
       appointment.add(
         Appointment(
           startTime: selectedDate,
-          endTime: selectedDate.add(const Duration(minutes: 90)),
+          endTime: selectedDate.add(const Duration(minutes: 120)),
           startTimeZone: '',
           endTimeZone: '',
           subject: 'Booked',
