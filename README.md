@@ -6,6 +6,7 @@
 ## Main features
 
 * Tap on schedule to set your booking or remove booking.
+* Drag and drop to update the start and end time of your booking
 * Local database with hive
 
 ### Project architecture (Clean Architecture Approach)
