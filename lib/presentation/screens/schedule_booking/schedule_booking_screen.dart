@@ -35,7 +35,11 @@ class _ScheduleBookingScreenState extends State {
       return;
     }
 
-    _scheduleBookingBloc.addAnAppointment(calendarTapDetails, context);
+    _scheduleBookingBloc.addAnAppointment(calendarTapDetails);
+  }
+
+  void _onCalendarDragEnd(AppointmentDragEndDetails appointmentDragEndDetails) {
+    _scheduleBookingBloc.dragToUpdateAppointment(appointmentDragEndDetails);
   }
 
   @override
@@ -61,17 +65,21 @@ class _ScheduleBookingScreenState extends State {
       showDatePickerButton: false,
       controller: _calendarController,
       showNavigationArrow: false,
+      onDragEnd: _onCalendarDragEnd,
       dataSource: calendarDataSource,
       onViewChanged: viewChangedCallback,
       onTap: calendarTapCallback,
       allowAppointmentResize: true,
       allowDragAndDrop: true,
       timeSlotViewSettings: const TimeSlotViewSettings(
-        minimumAppointmentDuration: Duration(minutes: 120),
+        minimumAppointmentDuration: Duration(minutes: 119),
         timeInterval: Duration(hours: 1),
-        // timeIntervalHeight: 100,
       ),
+      dragAndDropSettings: const DragAndDropSettings(showTimeIndicator: true),
       viewNavigationMode: ViewNavigationMode.none,
+      selectionDecoration: const BoxDecoration(
+        color: Colors.transparent,
+      ),
       resourceViewSettings: const ResourceViewSettings(
         size: 60,
         showAvatar: false,
